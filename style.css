@@ -55,17 +55,34 @@ header .logo img {
     margin-right: 15px;
 }
 
-header nav ul {
+.off-screen-menu {
     list-style: none;
     display: flex;
 }
-
-header nav ul li {
+.off-screen-menu {
     margin: 0 15px;
     position: relative;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
 }
 
-header nav ul li a {
+.off-screen-menu.active{
+    right: 0;
+}
+
+
+.off-screen-menu a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -73,7 +90,7 @@ header nav ul li a {
     transition: all 0.3 ease;
 }
 
-header nav ul li a:hover {
+.off-screen-menu a:hover {
     text-decoration: none;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(255,165,0,0.7);
@@ -81,7 +98,7 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-header nav ul li a:hover::before {
+.off-screen-menu a:hover::before {
     content: "";
     position: absolute;
     bottom: -10px; /* Adjust position as needed */
@@ -93,10 +110,57 @@ header nav ul li a:hover::before {
     transition: transform 0.3s ease;
 }
 
-header nav ul li a:hover::before {
+.off-screen-menu a:hover::before {
     transform: scaleX(1);
 }
 
+nav{
+    padding:1rem;
+    display: flex;
+    background-color: #8B4513; /* Brown */
+}
+
+.ham-menu{
+    height: 50px;
+    width: 50px;
+
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){ 
+    top: 50;
+    transform: translate (-50%, -50%) rotate(45);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
 .hero {
     background-color: #D2B48C; /* Tan */
     color: #fff;
