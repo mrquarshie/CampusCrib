@@ -144,7 +144,7 @@ section#about, section#services {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    border-radius: 50px;
+    
 }
 
 .card {
@@ -153,15 +153,18 @@ section#about, section#services {
     padding: 20px;
     width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
     
 }
 
 .card h3 {
     margin-bottom: 15px;
+    border-radius: 50px;
 }
 
 .card p {
     color: #666;
+    border-radius: 50px;
 }
 
 footer {
@@ -169,6 +172,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+    border-radius: 50px;
 }
 
 /* Responsive design */
