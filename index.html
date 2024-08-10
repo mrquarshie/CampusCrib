@@ -1,111 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src = "script.js" ></script>
     <title>Campus Crib</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="LOGO.jpg" alt="company logo" width="150px" height="150px">
-            <h1>CampusCrib</h1>
-        </div>
-        <div class="off-screen-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <nav>
-            <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Header Section -->
+    <header class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4 d-flex align-items-center">
+                <img src="LOGO.jpg" alt="company logo" class="img-fluid" width="150" height="150">
+                <h1 class="ml-3">campuscrib</h1>
             </div>
-        </nav>
+            <div class="col-12 col-md-8 d-flex justify-content-between align-items-center">
+                <nav class="d-none d-md-block">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class = "d-md-none">
+                    <div class="ham-menu d">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    
-    <section id="home">
+
+    <!-- Side Navigation Menu -->
+    <nav class="side-nav">
+        <div class="close-btn">&times;</div>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="container-fluid text-center py-5 bg-light">
         <div class="hero">
-            <h2>Find Your Perfect Hostel</h2>
+            <h2 class="display-4">Find Your Perfect Hostel</h2>
             <p>Your home away from home.</p>
-            <a href="login.html">
-                <button>Get Started</button>
-            </a>
-              
+            <a href="login.html" class="btn btn-primary btn-lg mt-3 custom-btn">Get Started</a>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Helping students find apartments and hostels in and around their campus.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-cards" id="services">
-            <div class="card">
-                <h3>Search Hostels</h3>
-                <p>Browse through a wide range of hostels available near your campus.</p>
-            </div>
-            <div class="card">
-                <h3>Book Online</h3>
-                <p>Secure your place online with our easy booking system.</p>
-            </div>
-            <div class="card">
-                <h3>Student Support</h3>
-                <p>Get 24/7 support for any issues or concerns you have.</p>
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2>About Us</h2>
+                <p>Helping students find apartments and hostels in and around their campus.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have any questions? Feel free to reach out to us!</p>
+    <!-- Services Section -->
+    <section id="services" class="container py-5">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Search Hostels</h3>
+                        <p>Browse through a wide range of hostels available near your campus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Book Online</h3>
+                        <p>Secure your place online with our easy booking system.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Student Support</h3>
+                        <p>Get 24/7 support for any issues or concerns you have.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <footer>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Contact Us</h2>
+                <p>Have any questions? Feel free to reach out to us!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="container-fluid text-center py-3 bg-dark text-white">
         <p id="cpyright">Copyright © 2024 Campus Crib Co. All Rights Reserved</p>
     </footer>
-</body>
-</html>
 
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Campus Crib</title>
-</head>
-<body>
-    <img src="LOGO.jpg" alt="company logo" width="500px" height="500px">
-    <div class="container-fluid">
-        <h1>This is a placeholder for the Campus Crib Co.</h1>
-        <h2 id="about">campus crib is a ghanaian start-up aimed at helping ghanaian students find hostels and apartments inand around the 
-            various university campuses
-        </h2>
-    </div>
-    <div class="container  p-5 my-4 bg-black text-white ">
-        <h1>let's find you a room</h1>
-        <p>what apartment will you like</p>
-    </div>
-    <div class="login">
-        Login to Access Website <a href="login.html">Here</a>
-        
-    </div>
-  
-    <footer class="container-fluid">
-    
-    <footer>
-        <p id="cpyright">Copyright © 2024 Campus Crib Co. All Rights Reserved</p>
-    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

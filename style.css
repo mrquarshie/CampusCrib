@@ -6,7 +6,7 @@ body{
     text-align: center;
 }
 
-.logo img{
+.img-fluid{
     border-radius: 20px;
 }
 
@@ -40,49 +40,42 @@ body {
 header {
     background-color: #8B4513; /* Brown */
     color: #fff;
-    padding: 20px;
+    padding: 0 15px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
 }
 
-header .logo {
+header .img-fluid {
     display: flex;
     align-items: center;
 }
 
-header .logo img {
+header .img-fluid img {
     margin-right: 15px;
 }
 
-.off-screen-menu {
+
+
+.nav-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; /* Ensure it takes full width */
+    padding-right: 0; /* Remove any padding that might be there */
+    justify-content: flex-end;
+    margin-right: -10px; /* Adjust this value as needed */
+}
+
+.nav {
+    margin-left: 700px;
+    display: flex;
     list-style: none;
-    display: flex;
-}
-.off-screen-menu {
-    margin: 0 15px;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed;
-    top: 0;
-    right: -450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3s ease;
 }
 
-.off-screen-menu.active{
-    right: 0;
-}
-
-
-.off-screen-menu a {
+.nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -90,7 +83,7 @@ header .logo img {
     transition: all 0.3 ease;
 }
 
-.off-screen-menu a:hover {
+.nav a:hover {
     text-decoration: none;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(255,165,0,0.7);
@@ -98,19 +91,18 @@ header .logo img {
     border-radius: 5px;
 }
 
-.off-screen-menu a:hover::before {
+.nav a:hover::before {
     content: "";
     position: absolute;
     bottom: -10px; /* Adjust position as needed */
     left: 0;
     width: 100%;
-    height: 2px; /* Underline effect */
     background: orange;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
-.off-screen-menu a:hover::before {
+.nav a:hover::before {
     transform: scaleX(1);
 }
 
@@ -120,12 +112,67 @@ nav{
     background-color: #8B4513; /* Brown */
 }
 
+nav.d-block{
+    display: block;
+}
+
+
+/* Side Navigation Menu Styles */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: rgb(231, 202, 133);
+    color: rgb(8, 7, 7);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+    overflow-y: auto; /* Ensure scrolling if needed */
+}
+
+.side-nav.open {
+    transform: translateX(0);
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.side-nav .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Ensure vertical alignment */
+}
+
+.side-nav .nav-item {
+    margin: 0;
+}
+.side-nav .nav-link:hover {
+    background-color: #8B4513;;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255,165,0,0.7);
+}
+
 .ham-menu{
     height: 50px;
     width: 50px;
-
+    display: flex;
     margin-left: auto;
-    position: relative;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    right: -120px;
+    top: -100px;
 }
 
 .ham-menu span {
@@ -149,8 +196,9 @@ nav{
 }
 
 .ham-menu.active span:nth-child(1){ 
-    top: 50;
-    transform: translate (-50%, -50%) rotate(45);
+    top: 25px;
+    left:3px;
+    transform: rotate(45deg);
 }
 
 .ham-menu.active span:nth-child(2) {
@@ -178,7 +226,7 @@ nav{
     margin-bottom: 30px;
 }
 
-.hero button {
+.custom-btn {
     padding: 10px 20px;
     font-size: 1.2em;
     background-color: #8B4513; /* Brown */
@@ -187,7 +235,7 @@ nav{
     cursor: pointer;
 }
 
-.hero button:hover {
+.custom-btn:hover {
     background-color: #A0522D; /* Darker Brown */
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(255,165,0,0.7);
