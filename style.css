@@ -109,7 +109,7 @@ header .img-fluid img {
 nav{
     padding:1rem;
     display: flex;
-    background-color: #8B4513; /* Brown */
+    background-color: #060000; /* Brown */
 }
 
 nav.d-block{
