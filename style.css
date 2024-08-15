@@ -167,12 +167,11 @@ nav.d-block{
     width: 50px;
     display: flex;
     margin-left: auto;
-    position: absolute;
     flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    right: -120px;
-    top: -100px;
+    justify-content: space-between;
+    
+    
+    
 }
 
 .ham-menu span {
@@ -180,9 +179,9 @@ nav.d-block{
     width: 100%;
     background-color: rgb(1, 1, 1);
     border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: block;
+
+
     transform: translate(-50%, -50%);
     transition: .3s ease;
 }
