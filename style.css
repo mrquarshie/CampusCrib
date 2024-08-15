@@ -163,21 +163,20 @@ nav.d-block{
 }
 
 .ham-menu{
+    position: absolute;
+    right: 15px;
     height: 50px;
     width: 50px;
     display: flex;
     margin-left: auto;
     flex-direction: column;
     justify-content: space-between;
-
-    
-    
 }
 
 .ham-menu span {
     height: 5px;
     width: 100%;
-    background-color: rgb(1, 1, 1);
+    background-color: rgb(255, 255, 255);
     border-radius: 25px;
     display: block;
 
