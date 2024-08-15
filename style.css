@@ -178,7 +178,7 @@ nav.d-block{
 .ham-menu span {
     height: 5px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: lightsalmon;
     border-radius: 25px;
     position: absolute;
     top: 50%;
