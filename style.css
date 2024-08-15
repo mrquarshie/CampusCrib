@@ -164,7 +164,8 @@ nav.d-block{
 
 .ham-menu{
     position: absolute;
-    right: 15px;
+    top: 10px;
+    right: 1px;
     height: 50px;
     width: 50px;
     display: flex;
@@ -172,6 +173,9 @@ nav.d-block{
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+
 
 .ham-menu span {
     height: 5px;
