@@ -12,5 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cream.settings')
+import sys
+sys.path.append('C:\Users\HP\Documents\GitHub\CampusCrib\cream')
 
 application = get_wsgi_application()
